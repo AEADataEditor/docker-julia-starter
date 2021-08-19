@@ -15,7 +15,7 @@ dependencies = [
 
 Pkg.add(dependencies)
 
-# add other workers
+# dynamically start up cores if not done by command line
 if nprocs() == 1
   addprocs(length(Sys.cpu_info()) ÷ 2 - 1)
 end
