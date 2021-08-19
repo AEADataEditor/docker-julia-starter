@@ -66,8 +66,5 @@ To run code directly, use
 ```shell
 docker run -it -v $(pwd):/code \
      -w /code \
-     $MYHUBID/${MYIMG}:$TAG julia -O3 -p 20 mainmulti.jl
+     $MYHUBID/${MYIMG}:$TAG julia mainmulti.jl
 ```
-
-Note that `-p 20`  will use 20 cores, as the Docker image has access to all of the cores of the host system unless specifically limited.
-
