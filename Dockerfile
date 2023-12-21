@@ -5,8 +5,8 @@ FROM julia:1.6.1-buster
 COPY 0setup.jl /0setup.jl
 RUN julia /0setup.jl
 
-# Change the default to /code
-WORKDIR /code
+# Change the default to /project
+WORKDIR /project
 
 # Default to running Julia
 CMD ["julia"]

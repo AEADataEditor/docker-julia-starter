@@ -13,8 +13,8 @@ then
 fi
 
 docker run -it  \
-   -v $WORKSPACE:/home/rstudio/project \
-   -w /home/rstudio/project \
+   -v $WORKSPACE:/project \
+   -w /project \
    --entrypoint /bin/bash \
    --rm  \
-   $dockerrepo ./run.sh
+   $dockerrepo 
